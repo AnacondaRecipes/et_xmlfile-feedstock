@@ -1,6 +1,6 @@
 {% set name = "et_xmlfile" %}
-{% set version = "1.0.1" %}
-{% set sha256 = "614d9722d572f6246302c4491846d2c393c199cfa4edc9af593437691683335b" %}
+{% set version = "1.1.0" %}
+{% set sha256 = "8eb9e2bc2f8c97e37a2dc85a09ecdcdec9d8a396530a6d5a33b30b9a92da0c5c" %}
 
 package:
   name: {{ name|lower }}
