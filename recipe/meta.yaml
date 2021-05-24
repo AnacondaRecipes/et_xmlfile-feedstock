@@ -27,7 +27,7 @@ test:
     - et_xmlfile
 
 about:
-  home: https://bitbucket.org/openpyxl/et_xmlfile
+  home: https://foss.heptapod.net/openpyxl/et_xmlfile
   license: MIT AND PSF-2.0
   license_family: MIT
   license_file: '{{ environ["RECIPE_DIR"] }}/LICENCE.rst'
@@ -36,7 +36,7 @@ about:
   description: |
     et_xmlfile is a low memory library for creating large XML files.
   doc_url: https://et-xmlfile.readthedocs.io
-  dev_url: https://bitbucket.org/openpyxl/et_xmlfile
+  dev_url: https://foss.heptapod.net/openpyxl/et_xmlfile
   doc_source_url: https://bitbucket.org/openpyxl/et_xmlfile/src/default/doc/index.rst
 
 extra:
