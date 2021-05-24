@@ -17,10 +17,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.6
     - setuptools
   run:
-    - python
+    - python >=3.6
 
 test:
   imports:
@@ -28,7 +28,7 @@ test:
 
 about:
   home: https://bitbucket.org/openpyxl/et_xmlfile
-  license: MIT
+  license: MIT AND PSF-2.0
   license_family: MIT
   license_file: '{{ environ["RECIPE_DIR"] }}/LICENCE.rst'
   summary: 'An implementation of lxml.xmlfile for the standard library'
