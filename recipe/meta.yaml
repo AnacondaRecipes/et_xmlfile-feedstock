@@ -25,6 +25,10 @@ requirements:
 test:
   imports:
     - et_xmlfile
+  requires:
+    - pip
+  commands:
+    - pip check
 
 about:
   home: https://bitbucket.org/openpyxl/et_xmlfile
