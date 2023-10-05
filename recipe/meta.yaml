@@ -44,7 +44,6 @@ about:
     et_xmlfile is a low memory library for creating large XML files.
   doc_url: https://et-xmlfile.readthedocs.io
   dev_url: https://foss.heptapod.net/openpyxl/et_xmlfile
-  doc_source_url: https://foss.heptapod.net/openpyxl/et_xmlfile/-/blob/branch/default/doc/index.rst
 
 extra:
   recipe-maintainers:
