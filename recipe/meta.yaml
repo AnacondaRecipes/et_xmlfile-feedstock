@@ -12,14 +12,16 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  number: 1
+  script: pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vv
   skip: true  # [py<37]
 
 requirements:
   host:
     - python
     - setuptools
+    - pip
+    - wheel
   run:
     - python
 
@@ -42,7 +44,6 @@ about:
     et_xmlfile is a low memory library for creating large XML files.
   doc_url: https://et-xmlfile.readthedocs.io
   dev_url: https://foss.heptapod.net/openpyxl/et_xmlfile
-  doc_source_url: https://foss.heptapod.net/openpyxl/et_xmlfile/-/blob/branch/default/doc/index.rst
 
 extra:
   recipe-maintainers:
