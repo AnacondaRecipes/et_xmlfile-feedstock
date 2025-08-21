@@ -41,7 +41,7 @@ test:
     - lxml
   commands:
     - pip check
-    - python -c 'from importlib.metadata import version; assert version("{{ name }}") == "{{ version }}"'
+    - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
     - python -c "import os,shutil,sysconfig; sp=sysconfig.get_paths().get('purelib') or sysconfig.get_paths().get('platlib'); src=os.path.join('gh_src','et_xmlfile','tests'); dst=os.path.join(sp,'et_xmlfile','tests'); os.makedirs(os.path.dirname(dst), exist_ok=True); shutil.copytree(src, dst, dirs_exist_ok=True)"
     - PYTHONPATH=$SRC_DIR/gh_src pytest gh_src -l --strict-markers --ignore=gh_src/et_xmlfile/tests/_vendor  # [unix]
     - set PYTHONPATH=%SRC_DIR%\gh_src && pytest gh_src -l --strict-markers --ignore=gh_src/et_xmlfile/tests/_vendor  # [win]
