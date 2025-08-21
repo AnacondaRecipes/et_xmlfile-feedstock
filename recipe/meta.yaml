@@ -10,7 +10,7 @@ source:
     sha256: dab3f4764309081ce75662649be815c4c9081e88f0837825f90fd28317d4da54
 
   - url: https://foss.heptapod.net/openpyxl/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz 
-    sha256: 6ad4c0d6c8e5f8a2bae8bbfcf69ead4b33c8628dfb3d0a0dac340f3289c244f0
+    sha256: b710736febf4b4589805f1cc0ccea41781353fc4550466c472649f8518bed4b5
     folder: gh_src
 
 build:
