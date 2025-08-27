@@ -6,12 +6,8 @@ package:
   version: {{ version }}
 
 source:
-  - url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: dab3f4764309081ce75662649be815c4c9081e88f0837825f90fd28317d4da54
-
-  - url: https://foss.heptapod.net/openpyxl/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz 
-    sha256: b710736febf4b4589805f1cc0ccea41781353fc4550466c472649f8518bed4b5
-    folder: gh_src
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: dab3f4764309081ce75662649be815c4c9081e88f0837825f90fd28317d4da54
 
 build:
   number: 0
@@ -28,8 +24,6 @@ requirements:
     - python
 
 test:
-  source_files:
-    - gh_src/et_xmlfile/tests
   imports:
     - et_xmlfile
     - et_xmlfile.incremental_tree
@@ -41,9 +35,6 @@ test:
   commands:
     - pip check
     - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
-    - python -c "import os,shutil,sysconfig; sp=sysconfig.get_paths().get('purelib') or sysconfig.get_paths().get('platlib'); src=os.path.join('gh_src','et_xmlfile','tests'); dst=os.path.join(sp,'et_xmlfile','tests'); os.makedirs(os.path.dirname(dst), exist_ok=True); shutil.copytree(src, dst, dirs_exist_ok=True)"
-    - PYTHONPATH=$SRC_DIR/gh_src pytest gh_src -l --strict-markers --ignore=gh_src/et_xmlfile/tests/_vendor  # [unix]
-    - set PYTHONPATH=%SRC_DIR%\gh_src && pytest gh_src -l --strict-markers --ignore=gh_src/et_xmlfile/tests/_vendor  # [win]
 
 about:
   home: https://foss.heptapod.net/openpyxl/et_xmlfile
